@@ -2,7 +2,7 @@ import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
 
 export const nasa = localFont({
-  src: "../../public/nasa.otf",
+  src: "../../public/Nasalization.woff",
   variable: "--font-nasa",
 });
 

@@ -3,3 +3,9 @@ export interface LinkButtonProps {
   children: React.ReactNode;
   className?: string;
 }
+
+export interface Project {
+  id: string;
+  label: string;
+  href: string;
+}

@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: "subway-sounds",
     label: "@1SubwaySounds",
-    href: "https://instagram.com/1SubwaySpunds",
+    href: "https://instagram.com/1SubwaySounds",
   },
   {
     id: "streetware",

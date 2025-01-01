@@ -4,7 +4,7 @@ import { LinkButton } from "./link-button";
 export const ProjectsSection: React.FC = () => {
   return (
     <div className="px-6">
-      <h2 className="text-2xl text-gray-200 font-semibold text-center mb-6">
+      <h2 className="text-2xl text-gray-200 text-greenfont-semibold text-center mb-6 font-nasa">
         Projects
       </h2>
       {projects.map((project) => (
