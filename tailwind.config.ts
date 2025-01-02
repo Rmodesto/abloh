@@ -9,8 +9,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        acumin: ["acumin-pro", "sans-serif"],
-        sans: ["helvetica", "sans-serif"],
+        roboto: ["var(--font-roboto)"],
+        nasa: ["nasa", "sans-serif"],
       },
       colors: {
         transparent: "transparent",
@@ -34,6 +34,7 @@ export default {
           300: "#d1d5db",
           400: "#9ca3af",
           500: "#6b7280",
+          600: "#707070",
         },
       },
     },

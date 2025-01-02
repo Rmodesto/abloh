@@ -1,6 +1,17 @@
 import type { Metadata } from "next";
-import { nasa, roboto } from "./components/fonts";
+
 import "./globals.css";
+import { Roboto } from "next/font/google";
+import localFont from "next/font/local";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
+});
+
+// Font files can be colocated inside of `pages`
+const nasa = localFont({ src: "../public/nasa.otf" });
 
 export const metadata: Metadata = {
   title: "RLink",
@@ -15,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/rm-icon.png" type="rm-icon" sizes="16x16" />
-      <body className={`${nasa.variable} ${roboto.variable} antialiased`}>
+      <body className={`${nasa.className} ${roboto.className} antialiased`}>
         {children}
       </body>
     </html>
