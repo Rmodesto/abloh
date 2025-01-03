@@ -29,6 +29,11 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-56KMRTSP" />
       <body className={`${nasa.className} ${roboto.className} antialiased`}>
         {children}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56KMRTSP" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
 
         <Analytics />
       </body>
