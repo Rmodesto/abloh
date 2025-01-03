@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-
 import "./globals.css";
 import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -10,7 +11,6 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-// Font files can be colocated inside of `pages`
 const nasa = localFont({ src: "../public/nasa.otf" });
 
 export const metadata: Metadata = {
@@ -26,8 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/rm-icon.png" type="rm-icon" sizes="16x16" />
+      <GoogleTagManager gtmId="GTM-56KMRTSP" />
       <body className={`${nasa.className} ${roboto.className} antialiased`}>
         {children}
+
+        <Analytics />
       </body>
     </html>
   );

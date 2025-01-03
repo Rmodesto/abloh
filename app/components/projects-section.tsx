@@ -9,7 +9,7 @@ export const ProjectsSection: React.FC = () => {
       </h2>
       {projects.map((project) => (
         <LinkButton
-          className="font-roboto"
+        
           key={project.id}
           href={project.href}
         >
